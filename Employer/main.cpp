@@ -12,13 +12,13 @@ void Show(Figures* fig) {
 }
 
 int main() {
-	worker w(10);
+	/*worker w(10);
 	manager m(20);
 	president p(30);
 
 	Show(&w);
 	Show(&m);
-	Show(&p);
+	Show(&p);*/
 
 	Circle* c = new Circle(5);
 	pramougolnik* pr = new pramougolnik(5, 10);
@@ -32,6 +32,11 @@ int main() {
 		Show(fig[i]);
 		cout << "Area is " << fig[i]->Area() << endl;
 
+	}
+
+	for (size_t i = 0; i < size; i++)
+	{
+		delete fig[i];
 	}
 
 	return 0;

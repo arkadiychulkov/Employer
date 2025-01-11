@@ -6,6 +6,9 @@ class Figures {
 public:
 	virtual void Show() = 0;
 	virtual double Area() = 0;
+	virtual ~Figures() {
+		cout << "Figures destructor" << endl;
+	}
 };
 
 class Circle : public Figures {
@@ -21,7 +24,9 @@ public:
 	double Area() {
 		return 3.14 * radius * radius;
 	}
-
+	~Circle() {
+		cout << "Circle destructor" << endl;
+	}
 };
 
 class pramougolnik : public Figures {
@@ -38,6 +43,9 @@ public:
 	}
 	double Area() {
 		return a * b;
+	}
+	~pramougolnik() {
+		cout << "pramougolnik destructor" << endl;
 	}
 };
 
@@ -57,6 +65,9 @@ public:
 	}
 	double Area() {
 		return (a + b) / 2;
+	}
+	~pramokutniytreykutnik() {
+		cout << "pramokutniytreykutnik destructor" << endl;
 	}
 };
 
@@ -78,5 +89,8 @@ public:
 	}
 	double Area() {
 		return (a + b) / 2;
+	}
+	~trapeziya() {
+		cout << "trapeziya destructor" << endl;
 	}
 };
